@@ -39,9 +39,29 @@ Future<void> main() async {
   print(resposta.success);*/
 
   //deletar um ParseObject
-  final categoria = ParseObject("Categorias")
+  /*final categoria = ParseObject("Categorias")
   ..objectId = 'J7ghtGPV9u';
-  categoria.delete();
+  categoria.delete();*/
+
+  //ler os dados de um ParseObject
+  /*final resposta = await ParseObject("Categorias").getObject("AKFlQ7fdPO");
+  if (resposta.success) print(resposta.result);*/
+
+  //ler todos os objetos
+  /*final resposta = await ParseObject("Categorias").getAll();
+  if (resposta.success) {
+    for (final parseObject in resposta.result) {
+      print(parseObject);
+    }
+  }*/
+
+  //ler todos objetos com características específicas
+  final query = QueryBuilder(ParseObject("Categorias"));
+  //query.whereEqualTo('posicao', 2);
+  query.whereContains("titulo", 'Ca');
+  query.whereEqualTo('posicao', 2);
+  final resposta = await query.query();
+  if (resposta.success) print(resposta.result);
 }
 
 class MyApp extends StatelessWidget {
