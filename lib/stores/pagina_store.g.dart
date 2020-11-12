@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'page_store.dart';
+part of 'pagina_store.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,8 +8,8 @@ part of 'page_store.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$PageStore on _PageStore, Store {
-  final _$paginaAtom = Atom(name: '_PageStore.pagina');
+mixin _$PaginaStore on _PaginaStore, Store {
+  final _$paginaAtom = Atom(name: '_PaginaStore.pagina');
 
   @override
   int get pagina {
@@ -24,16 +24,16 @@ mixin _$PageStore on _PageStore, Store {
     });
   }
 
-  final _$_PageStoreActionController = ActionController(name: '_PageStore');
+  final _$_PaginaStoreActionController = ActionController(name: '_PaginaStore');
 
   @override
   void setPagina(int valor) {
-    final _$actionInfo =
-        _$_PageStoreActionController.startAction(name: '_PageStore.setPagina');
+    final _$actionInfo = _$_PaginaStoreActionController.startAction(
+        name: '_PaginaStore.setPagina');
     try {
       return super.setPagina(valor);
     } finally {
-      _$_PageStoreActionController.endAction(_$actionInfo);
+      _$_PaginaStoreActionController.endAction(_$actionInfo);
     }
   }
 

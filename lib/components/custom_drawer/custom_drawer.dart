@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:xlo_mobx/components/custom_drawer/page_section.dart';
+import 'package:xlo_mobx/components/custom_drawer/opcoes_menu.dart';
 
-import 'custom_drawer_header.dart';
+import 'cabecalho_drawer.dart';
 
 class CustomDrawer extends StatelessWidget {
   @override
@@ -15,8 +15,8 @@ class CustomDrawer extends StatelessWidget {
         child: Drawer(
           child: ListView(
             children: [
-              CustomDrawerHeader(),
-              PageSection(),
+              CabecalhoDrawer(),
+              OpcoesMenu(),
             ],
           ),
         ),

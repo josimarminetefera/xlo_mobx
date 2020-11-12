@@ -1,10 +1,10 @@
 import 'package:mobx/mobx.dart';
 
-part 'page_store.g.dart';
+part 'pagina_store.g.dart';
 
-class PageStore = _PageStore with _$PageStore;
+class PaginaStore = _PaginaStore with _$PaginaStore;
 
-abstract class _PageStore with Store {
+abstract class _PaginaStore with Store {
   @observable
   int pagina = 0;
 

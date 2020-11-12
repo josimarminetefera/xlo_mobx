@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/stores/page_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/principal_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home/widgets/buscar_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/page_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/cabecalho_drawer.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/opcoes_menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/opcao_menu_tile.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/page_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/pagina_store.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/page_store.g.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +41,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loja_virtual" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -66,22 +71,22 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604866241184" />
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1604881070320">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1605142126252">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604881070320" />
-    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1604881070320">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126252" />
+    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1605142126251">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604881070320" />
-    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1604881070319">
+    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
+    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1605142126251">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604881070319" />
-    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1604881070320">
+    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
+    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1605142126251">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604881070320" />
+    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
     <state x="-1179" y="6" key="SettingsEditor" timestamp="1604845927484">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
@@ -90,5 +95,9 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-984" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604845862493" />
+    <state x="-1049" y="61" width="737" height="606" key="find.popup" timestamp="1605141626815">
+      <screen x="-1360" y="0" width="1360" height="728" />
+    </state>
+    <state x="-1049" y="61" width="737" height="606" key="find.popup/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605141626815" />
   </component>
 </project>

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PageTile extends StatelessWidget {
-  PageTile({this.lable, this.iconData, this.onTap, this.highlighted});
+class OpcaoMenuTile extends StatelessWidget {
+  OpcaoMenuTile({this.lable, this.iconData, this.onTap, this.highlighted});
 
   final String lable;
   final IconData iconData;

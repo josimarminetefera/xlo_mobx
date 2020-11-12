@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
-import 'package:xlo_mobx/screens/home/home_screen.dart';
-import 'package:xlo_mobx/stores/page_store.dart';
+import 'package:xlo_mobx/screens/home/principal_screen.dart';
+import 'package:xlo_mobx/stores/pagina_store.dart';
 
 class BaseScreen extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class BaseScreen extends StatefulWidget {
 class _BaseScreenState extends State<BaseScreen> {
   final PageController pageController = PageController();
 
-  final PageStore pageStore = GetIt.I<PageStore>();
+  final PaginaStore paginaStore = GetIt.I<PaginaStore>();
 
   @override
   void initState() {
@@ -21,7 +21,7 @@ class _BaseScreenState extends State<BaseScreen> {
     //será que não seria melhor mandar isso lá para o page_section?????
     //sempre que for clicada no menu lateral vai atualizar a pagina atualizando a pagina isso aqui aciona
     reaction(
-      (_) => pageStore.pagina, //fica observando esta variavel
+      (_) => paginaStore.pagina, //fica observando esta variavel
       (pagina) => pageController.jumpToPage(pagina), //o que acontece quando altera o observable
     );
   }
@@ -35,7 +35,7 @@ class _BaseScreenState extends State<BaseScreen> {
         controller: pageController,
         physics: NeverScrollableScrollPhysics(), //não move pelas laterais
         children: [
-          HomeScreen(),
+          PrincipalScreen(),
           Container(color: Colors.red),
           Container(color: Colors.blue),
           Container(color: Colors.black),
