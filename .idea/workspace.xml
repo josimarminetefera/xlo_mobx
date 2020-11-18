@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/principal_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home/widgets/buscar_dialog.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/custom_drawer_header.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/cabecalho_drawer.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_section.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/opcoes_menu.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/page_tile.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/opcao_menu_tile.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/custom_drawer/cabecalho_drawer.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/custom_drawer/cabecalho_drawer.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/base/base_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/home/home_screen.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/page_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/pagina_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/page_store.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/principal_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/principal/principal_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/home/widgets/buscar_dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/principal/widgets/buscar_dialog.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +65,22 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604866241184" />
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1605142126252">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1605143590782">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126252" />
-    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1605142126251">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605143590782" />
+    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1605143590782">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
-    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1605142126251">
+    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605143590782" />
+    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1605143590781">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
-    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1605142126251">
+    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605143590781" />
+    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1605143590782">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605142126251" />
+    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605143590782" />
     <state x="-1179" y="6" key="SettingsEditor" timestamp="1604845927484">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
