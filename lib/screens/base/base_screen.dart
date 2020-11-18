@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
-import 'package:xlo_mobx/screens/home/principal_screen.dart';
+import 'package:xlo_mobx/screens/principal/principal_screen.dart';
 import 'package:xlo_mobx/stores/pagina_store.dart';
 
 class BaseScreen extends StatefulWidget {

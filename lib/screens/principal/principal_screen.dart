@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:xlo_mobx/components/custom_drawer/custom_drawer.dart';
-import 'package:xlo_mobx/screens/home/widgets/buscar_dialog.dart';
+import 'package:xlo_mobx/screens/principal/widgets/buscar_dialog.dart';
 
 class PrincipalScreen extends StatelessWidget {
   @override
@@ -13,19 +13,21 @@ class PrincipalScreen extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("XLO"),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              _abrirBuscar("");
-            },
-          )
-        ],
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("XLO"),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.search),
+              onPressed: () {
+                _abrirBuscar("");
+              },
+            )
+          ],
+        ),
+        drawer: CustomDrawer(),
       ),
-      drawer: CustomDrawer(),
     );
   }
 }
