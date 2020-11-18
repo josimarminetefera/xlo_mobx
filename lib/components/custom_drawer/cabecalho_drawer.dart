@@ -1,24 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:xlo_mobx/screens/login/login_screen.dart';
 
 class CabecalhoDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.purple,
-      height: 95,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        children: [
-          Icon(
-            Icons.person,
-            color: Colors.white,
-            size: 35,
-          ),
-          const SizedBox(
-            width: 20,
-          ),
-          _conteudoCabecalho(),
-        ],
+    return GestureDetector(
+      onTap: () {
+        Navigator.of(context).pop();
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => LoginScreen()),
+        );
+      },
+      child: Container(
+        color: Colors.purple,
+        height: 95,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Row(
+          children: [
+            Icon(
+              Icons.person,
+              color: Colors.white,
+              size: 35,
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            _conteudoCabecalho(),
+          ],
+        ),
       ),
     );
   }
