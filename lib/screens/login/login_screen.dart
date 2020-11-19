@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xlo_mobx/screens/cadastrar/cadastrar_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -31,7 +32,7 @@ class LoginScreen extends StatelessWidget {
                   Divider(
                     color: Colors.black,
                   ),
-                  _textoCadastrar()
+                  _textoCadastrar(context),
                 ],
               ),
             ),
@@ -54,7 +55,7 @@ class LoginScreen extends StatelessWidget {
 
   Column _camposEmailSenha() {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Padding(
           padding: EdgeInsets.only(left: 3, bottom: 4, top: 8),
@@ -116,7 +117,7 @@ class LoginScreen extends StatelessWidget {
 
   Container _botaoEntrar() {
     return Container(
-      height: 40,
+      height: 50,
       margin: EdgeInsets.only(top: 20, bottom: 12),
       child: RaisedButton(
         color: Colors.orange,
@@ -124,14 +125,14 @@ class LoginScreen extends StatelessWidget {
         textColor: Colors.white,
         elevation: 0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(25),
         ),
         onPressed: () {},
       ),
     );
   }
 
-  Padding _textoCadastrar() {
+  Padding _textoCadastrar(context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Wrap(
@@ -143,7 +144,13 @@ class LoginScreen extends StatelessWidget {
             style: TextStyle(fontSize: 16),
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => CadastrarScreen(),
+                ),
+              );
+            },
             child: Text(
               "Cadastre-se",
               style: TextStyle(
