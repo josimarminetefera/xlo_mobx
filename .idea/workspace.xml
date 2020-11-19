@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/cadastrar/components/titulo_subtituilo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cadastrar/widget/titulo_subtituilo.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loja_virtual" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -59,10 +58,10 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605744704096" />
-    <state x="-900" y="119" key="FileChooserDialogImpl" timestamp="1604866241184">
+    <state x="-900" y="119" key="FileChooserDialogImpl" timestamp="1605749130993">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604866241184" />
+    <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605749130993" />
     <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1605746634278">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>

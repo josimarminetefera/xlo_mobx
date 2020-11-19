@@ -1,7 +1,7 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:xlo_mobx/screens/cadastrar/components/titulo_subtituilo.dart';
+import 'package:xlo_mobx/screens/cadastrar/widget/titulo_subtituilo.dart';
 
 class CadastrarScreen extends StatelessWidget {
   @override
