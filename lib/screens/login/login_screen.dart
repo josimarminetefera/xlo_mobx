@@ -41,46 +41,13 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Padding _textoCadastrar() {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8),
-      child: Wrap(
-        //serve para quebrar para a linha de baixo caso nao caiba o campo
-        alignment: WrapAlignment.center,
-        children: [
-          Text(
-            "Não tem uma conta?",
-            style: TextStyle(fontSize: 16),
-          ),
-          GestureDetector(
-            onTap: () {},
-            child: Text(
-              "Cadastre-se",
-              style: TextStyle(
-                decoration: TextDecoration.underline,
-                color: Colors.purple,
-                fontSize: 16,
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
-  Container _botaoEntrar() {
-    return Container(
-      height: 40,
-      margin: EdgeInsets.only(top: 20, bottom: 12),
-      child: RaisedButton(
-        color: Colors.orange,
-        child: Text("Entrar"),
-        textColor: Colors.white,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        onPressed: () {},
+  Text _tituloAcessarComEmail() {
+    return Text(
+      "Acessar com E-mail:",
+      textAlign: TextAlign.center,
+      style: TextStyle(
+        fontSize: 16,
+        color: Colors.grey[900],
       ),
     );
   }
@@ -147,13 +114,46 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Text _tituloAcessarComEmail() {
-    return Text(
-      "Acessar com E-mail:",
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        fontSize: 16,
-        color: Colors.grey[900],
+  Container _botaoEntrar() {
+    return Container(
+      height: 40,
+      margin: EdgeInsets.only(top: 20, bottom: 12),
+      child: RaisedButton(
+        color: Colors.orange,
+        child: Text("Entrar"),
+        textColor: Colors.white,
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        onPressed: () {},
+      ),
+    );
+  }
+
+  Padding _textoCadastrar() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 8),
+      child: Wrap(
+        //serve para quebrar para a linha de baixo caso nao caiba o campo
+        alignment: WrapAlignment.center,
+        children: [
+          Text(
+            "Não tem uma conta?",
+            style: TextStyle(fontSize: 16),
+          ),
+          GestureDetector(
+            onTap: () {},
+            child: Text(
+              "Cadastre-se",
+              style: TextStyle(
+                decoration: TextDecoration.underline,
+                color: Colors.purple,
+                fontSize: 16,
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
