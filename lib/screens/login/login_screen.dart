@@ -13,27 +13,30 @@ class LoginScreen extends StatelessWidget {
         alignment: Alignment.center, //alinhas o card no centro do containner
         child: SingleChildScrollView(
           // para dar scrool em um widget
-          child: Card(
-            margin: const EdgeInsets.symmetric(horizontal: 32),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-            ),
-            elevation: 8,
-            child: Padding(
-              //afasta tudo mundo de dentro
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch, //largura maxima
-                mainAxisSize: MainAxisSize.min, //altura minima
-                children: [
-                  _tituloAcessarComEmail(),
-                  _camposEmailSenha(),
-                  _botaoEntrar(),
-                  Divider(
-                    color: Colors.black,
-                  ),
-                  _textoCadastrar(context),
-                ],
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 16), //para não cortar a sombra por conta do SigleChildScrool
+            child: Card(
+              margin: const EdgeInsets.symmetric(horizontal: 32),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              elevation: 8,
+              child: Padding(
+                //afasta tudo mundo de dentro
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch, //largura maxima
+                  mainAxisSize: MainAxisSize.min, //altura minima
+                  children: [
+                    _tituloAcessarComEmail(),
+                    _camposEmailSenha(),
+                    _botaoEntrar(),
+                    Divider(
+                      color: Colors.black,
+                    ),
+                    _textoCadastrar(context),
+                  ],
+                ),
               ),
             ),
           ),

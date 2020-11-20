@@ -1,9 +1,13 @@
 import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:xlo_mobx/screens/cadastrar/widget/titulo_subtituilo.dart';
+import 'package:xlo_mobx/stores/cadastrar_store.dart';
 
 class CadastrarScreen extends StatelessWidget {
+  final CadastrarStore cadastrarStore = CadastrarStore();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,25 +19,28 @@ class CadastrarScreen extends StatelessWidget {
         alignment: Alignment.center,
         child: SingleChildScrollView(
           //para dar scrool no card
-          child: Card(
-            margin: const EdgeInsets.symmetric(horizontal: 32),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
-            ),
-            elevation: 8,
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch, //maio largura possivel
-                mainAxisSize: MainAxisSize.min, //altura minima
-                children: [
-                  _formularioCadastro(),
-                  _botaoCadastrar(),
-                  Divider(
-                    color: Colors.black,
-                  ),
-                  _botaoEntrar(context),
-                ],
+          child: Padding(
+            padding: EdgeInsets.only(bottom: 16), //Para não cortar a sombra do card por causa do SigleChildScoolView
+            child: Card(
+              margin: const EdgeInsets.symmetric(horizontal: 32),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+              ),
+              elevation: 8,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch, //maio largura possivel
+                  mainAxisSize: MainAxisSize.min, //altura minima
+                  children: [
+                    _formularioCadastro(),
+                    _botaoCadastrar(),
+                    Divider(
+                      color: Colors.black,
+                    ),
+                    _botaoEntrar(context),
+                  ],
+                ),
               ),
             ),
           ),
@@ -50,18 +57,22 @@ class CadastrarScreen extends StatelessWidget {
           titulo: "Apelido",
           subtitulo: "Como aparecerá em seus anúncios.",
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(),
-            hintText: "Nome",
-            isDense: true,
-          ),
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              hintText: "Nome",
+              isDense: true,
+              errorText: cadastrarStore.nomeErro,
+            ),
+            onChanged: cadastrarStore.setNome,
+          );
+        }),
         SizedBox(
           height: 16,
         ),
         TituloSubtitulo(
-          titulo: "Email",
+          titulo: "E-mail",
           subtitulo: "Enviaremos um e-mail de confirmação.",
         ),
         TextField(
