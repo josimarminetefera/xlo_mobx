@@ -2,6 +2,7 @@ import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:mobx/mobx.dart';
 import 'package:xlo_mobx/screens/cadastrar/widget/titulo_subtituilo.dart';
 import 'package:xlo_mobx/stores/cadastrar_store.dart';
 
@@ -75,15 +76,19 @@ class CadastrarScreen extends StatelessWidget {
           titulo: "E-mail",
           subtitulo: "Enviaremos um e-mail de confirmação.",
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: "nome@servidor.com",
-            isDense: true,
-          ),
-          keyboardType: TextInputType.emailAddress,
-          autocorrect: false, //desabilita correcao
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: "nome@servidor.com",
+              isDense: true,
+              errorText: cadastrarStore.emailErro,
+            ),
+            keyboardType: TextInputType.emailAddress,
+            autocorrect: false, //desabilita correcao
+            onChanged: cadastrarStore.setEmail,
+          );
+        }),
         SizedBox(
           height: 16,
         ),
@@ -91,19 +96,23 @@ class CadastrarScreen extends StatelessWidget {
           titulo: "Celular",
           subtitulo: "Proteja sua conta.",
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: OutlineInputBorder(),
-            hintText: "(99) 99999-9999",
-            isDense: true,
-          ),
-          keyboardType: TextInputType.phone,
-          autocorrect: false,
-          inputFormatters: [
-            WhitelistingTextInputFormatter.digitsOnly, //só aceita passar
-            TelefoneInputFormatter(), //mascara de telefone
-          ],
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(),
+              hintText: "(99) 99999-9999",
+              isDense: true,
+              errorText: cadastrarStore.telefoneErro,
+            ),
+            keyboardType: TextInputType.phone,
+            autocorrect: false,
+            inputFormatters: [
+              WhitelistingTextInputFormatter.digitsOnly, //só aceita passar
+              TelefoneInputFormatter(), //mascara de telefone
+            ],
+            onChanged: cadastrarStore.setTelefone,
+          );
+        }),
         SizedBox(
           height: 16,
         ),
@@ -111,13 +120,17 @@ class CadastrarScreen extends StatelessWidget {
           titulo: "Senha",
           subtitulo: "Use letras, números e caracteres especiais.",
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(),
-            isDense: true,
-          ),
-          obscureText: true,
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              isDense: true,
+              errorText: cadastrarStore.senhaErro,
+            ),
+            obscureText: true,
+            onChanged: cadastrarStore.setSenha,
+          );
+        }),
         SizedBox(
           height: 16,
         ),
@@ -125,13 +138,13 @@ class CadastrarScreen extends StatelessWidget {
           titulo: "Confirmar Senha",
           subtitulo: "Repita a senha.",
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(),
-            isDense: true,
-          ),
-          obscureText: true,
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(border: const OutlineInputBorder(), isDense: true, errorText: cadastrarStore.senhaConfirmarErro),
+            obscureText: true,
+            onChanged: cadastrarStore.setSenhaConfirmar,
+          );
+        }),
       ],
     );
   }

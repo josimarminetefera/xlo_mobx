@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/cadastrar_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/cadastrar_store.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/cadastrar_store.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/cadastrar_store.g.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +36,8 @@
   <component name="PropertiesComponent">
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../loja_virtual" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SvnConfiguration">
@@ -62,26 +66,26 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605749130993" />
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1605831460799">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom" timestamp="1606168841176">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605831460799" />
-    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1605831460799">
+    <state width="1300" height="160" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606168841176" />
+    <state width="1300" height="160" key="GridCell.Tab.0.center" timestamp="1606168841176">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605831460799" />
-    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1605831460799">
+    <state width="1300" height="160" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606168841176" />
+    <state width="1300" height="160" key="GridCell.Tab.0.left" timestamp="1606168841175">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605831460799" />
-    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1605831460799">
+    <state width="1300" height="160" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606168841175" />
+    <state width="1300" height="160" key="GridCell.Tab.0.right" timestamp="1606168841176">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1605831460799" />
-    <state x="-1179" y="6" key="SettingsEditor" timestamp="1604845927484">
+    <state width="1300" height="160" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606168841176" />
+    <state x="-1179" y="6" key="SettingsEditor" timestamp="1606167730391">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-1179" y="6" key="SettingsEditor/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604845927484" />
+    <state x="-1179" y="6" key="SettingsEditor/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606167730391" />
     <state x="-984" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1604845862493">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
