@@ -39,7 +39,7 @@ class CadastrarScreen extends StatelessWidget {
                     Divider(
                       color: Colors.black,
                     ),
-                    _botaoEntrar(context),
+                    _opcaoEntrar(context),
                   ],
                 ),
               ),
@@ -60,6 +60,7 @@ class CadastrarScreen extends StatelessWidget {
         ),
         Observer(builder: (_) {
           return TextField(
+            enabled: !cadastrarStore.carregando,
             decoration: InputDecoration(
               border: const OutlineInputBorder(),
               hintText: "Nome",
@@ -78,6 +79,7 @@ class CadastrarScreen extends StatelessWidget {
         ),
         Observer(builder: (_) {
           return TextField(
+            enabled: !cadastrarStore.carregando,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: "nome@servidor.com",
@@ -85,7 +87,8 @@ class CadastrarScreen extends StatelessWidget {
               errorText: cadastrarStore.emailErro,
             ),
             keyboardType: TextInputType.emailAddress,
-            autocorrect: false, //desabilita correcao
+            autocorrect: false,
+            //desabilita correcao
             onChanged: cadastrarStore.setEmail,
           );
         }),
@@ -98,6 +101,7 @@ class CadastrarScreen extends StatelessWidget {
         ),
         Observer(builder: (_) {
           return TextField(
+            enabled: !cadastrarStore.carregando,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
               hintText: "(99) 99999-9999",
@@ -122,6 +126,7 @@ class CadastrarScreen extends StatelessWidget {
         ),
         Observer(builder: (_) {
           return TextField(
+            enabled: !cadastrarStore.carregando,
             decoration: InputDecoration(
               border: const OutlineInputBorder(),
               isDense: true,
@@ -140,7 +145,12 @@ class CadastrarScreen extends StatelessWidget {
         ),
         Observer(builder: (_) {
           return TextField(
-            decoration: InputDecoration(border: const OutlineInputBorder(), isDense: true, errorText: cadastrarStore.senhaConfirmarErro),
+            enabled: !cadastrarStore.carregando,
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              isDense: true,
+              errorText: cadastrarStore.senhaConfirmarErro,
+            ),
             obscureText: true,
             onChanged: cadastrarStore.setSenhaConfirmar,
           );
@@ -149,24 +159,31 @@ class CadastrarScreen extends StatelessWidget {
     );
   }
 
-  Container _botaoCadastrar() {
-    return Container(
-      height: 50,
-      margin: EdgeInsets.only(top: 20, bottom: 12),
-      child: RaisedButton(
-        color: Colors.orange,
-        child: Text("Cadastrar"),
-        textColor: Colors.white,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
+  Widget _botaoCadastrar() {
+    return Observer(builder: (_) {
+      return Container(
+        height: 50,
+        margin: EdgeInsets.only(top: 20, bottom: 12),
+        child: RaisedButton(
+          color: Colors.orange,
+          disabledColor: Colors.orange.withAlpha(120),
+          child: cadastrarStore.carregando
+              ? CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation(Colors.white),
+                )
+              : Text("Cadastrar"),
+          textColor: Colors.white,
+          elevation: 0,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25),
+          ),
+          onPressed: cadastrarStore.cadastrarPrecionado,
         ),
-        onPressed: () {},
-      ),
-    );
+      );
+    });
   }
 
-  Padding _botaoEntrar(BuildContext context) {
+  Widget _opcaoEntrar(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Row(

@@ -34,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                     Divider(
                       color: Colors.black,
                     ),
-                    _textoCadastrar(context),
+                    _opcaoCadastrar(context),
                   ],
                 ),
               ),
@@ -135,7 +135,7 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  Padding _textoCadastrar(context) {
+  Padding _opcaoCadastrar(context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Wrap(

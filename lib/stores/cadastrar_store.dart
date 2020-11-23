@@ -99,11 +99,28 @@ abstract class _CadastrarStore with Store {
   @computed
   bool get senhaConfirmarValida => senhaConfirmar != null && senhaConfirmar == senha;
 
+  @computed
   String get senhaConfirmarErro {
     if (senhaConfirmar == null || senhaConfirmarValida) {
       return null;
     } else {
       return "Senha diferente";
     }
+  }
+
+  @observable
+  bool carregando = false;
+
+  @computed
+  bool get formularioValido => nomeValido && emailValido && telefoneValido && senhaValida && senhaConfirmarValida;
+
+  @computed
+  Function get cadastrarPrecionado => (formularioValido && !carregando) ? _cadastrar : null;
+
+  @action
+  Future<void> _cadastrar() async {
+    carregando = true;
+    await Future.delayed(Duration(seconds: 3));
+    carregando = false;
   }
 }

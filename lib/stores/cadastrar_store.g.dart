@@ -44,6 +44,27 @@ mixin _$CadastrarStore on _CadastrarStore, Store {
           Computed<bool>(() => super.senhaConfirmarValida,
               name: '_CadastrarStore.senhaConfirmarValida'))
       .value;
+  Computed<String> _$senhaConfirmarErroComputed;
+
+  @override
+  String get senhaConfirmarErro => (_$senhaConfirmarErroComputed ??=
+          Computed<String>(() => super.senhaConfirmarErro,
+              name: '_CadastrarStore.senhaConfirmarErro'))
+      .value;
+  Computed<bool> _$formularioValidoComputed;
+
+  @override
+  bool get formularioValido => (_$formularioValidoComputed ??= Computed<bool>(
+          () => super.formularioValido,
+          name: '_CadastrarStore.formularioValido'))
+      .value;
+  Computed<Function> _$cadastrarPrecionadoComputed;
+
+  @override
+  Function get cadastrarPrecionado => (_$cadastrarPrecionadoComputed ??=
+          Computed<Function>(() => super.cadastrarPrecionado,
+              name: '_CadastrarStore.cadastrarPrecionado'))
+      .value;
 
   final _$nomeAtom = Atom(name: '_CadastrarStore.nome');
 
@@ -120,6 +141,28 @@ mixin _$CadastrarStore on _CadastrarStore, Store {
     });
   }
 
+  final _$carregandoAtom = Atom(name: '_CadastrarStore.carregando');
+
+  @override
+  bool get carregando {
+    _$carregandoAtom.reportRead();
+    return super.carregando;
+  }
+
+  @override
+  set carregando(bool value) {
+    _$carregandoAtom.reportWrite(value, super.carregando, () {
+      super.carregando = value;
+    });
+  }
+
+  final _$_cadastrarAsyncAction = AsyncAction('_CadastrarStore._cadastrar');
+
+  @override
+  Future<void> _cadastrar() {
+    return _$_cadastrarAsyncAction.run(() => super._cadastrar());
+  }
+
   final _$_CadastrarStoreActionController =
       ActionController(name: '_CadastrarStore');
 
@@ -186,11 +229,15 @@ email: ${email},
 telefone: ${telefone},
 senha: ${senha},
 senhaConfirmar: ${senhaConfirmar},
+carregando: ${carregando},
 nomeValido: ${nomeValido},
 emailValido: ${emailValido},
 telefoneValido: ${telefoneValido},
 senhaValida: ${senhaValida},
-senhaConfirmarValida: ${senhaConfirmarValida}
+senhaConfirmarValida: ${senhaConfirmarValida},
+senhaConfirmarErro: ${senhaConfirmarErro},
+formularioValido: ${formularioValido},
+cadastrarPrecionado: ${cadastrarPrecionado}
     ''';
   }
 }
