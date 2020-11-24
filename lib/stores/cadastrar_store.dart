@@ -1,5 +1,7 @@
 import 'package:mobx/mobx.dart';
 import 'package:xlo_mobx/helpers/extencoes.dart';
+import 'package:xlo_mobx/models/usuario.dart';
+import 'package:xlo_mobx/repositorios/usuario_repositorio.dart';
 
 part 'cadastrar_store.g.dart';
 
@@ -9,8 +11,8 @@ abstract class _CadastrarStore with Store {
   //bom para debugar
   _CadastrarStore() {
     autorun((_) {
-      print(senha);
-      print(senhaConfirmar);
+      // print(senha);
+      // print(senhaConfirmar);
     });
   }
 
@@ -120,7 +122,14 @@ abstract class _CadastrarStore with Store {
   @action
   Future<void> _cadastrar() async {
     carregando = true;
-    await Future.delayed(Duration(seconds: 3));
+    final usuario = Usuario(
+      nome: nome,
+      email: email,
+      telefone: telefone,
+      senha: senha,
+    );
+    await UsuarioRepositorio().cadastrar(usuario);
+    //await Future.delayed(Duration(seconds: 3));
     carregando = false;
   }
 }
