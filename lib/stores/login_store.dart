@@ -1,6 +1,8 @@
+import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
 import 'package:xlo_mobx/helpers/extencoes.dart';
 import 'package:xlo_mobx/repositorios/usuario_repositorio.dart';
+import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
 
 part 'login_store.g.dart';
 
@@ -60,6 +62,8 @@ abstract class _LoginStore with Store {
     carregando = true;
     try {
       final usuario = await UsuarioRepositorio().loginEmail(email, senha);
+      //setando no sigleton o usuário quye logou para poder acessar ele de qualquer lugar
+      GetIt.I<UsuarioGerenciadorStore>().setUsuario(usuario);
     } catch (e) {
       mensagemErro = e;
     }

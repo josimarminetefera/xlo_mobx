@@ -1,7 +1,9 @@
+import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
 import 'package:xlo_mobx/helpers/extencoes.dart';
 import 'package:xlo_mobx/models/usuario.dart';
 import 'package:xlo_mobx/repositorios/usuario_repositorio.dart';
+import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
 
 part 'cadastrar_store.g.dart';
 
@@ -134,6 +136,7 @@ abstract class _CadastrarStore with Store {
     try {
       final resultado = await UsuarioRepositorio().cadastrar(usuario);
       print(resultado);
+      GetIt.I<UsuarioGerenciadorStore>().setUsuario(resultado);
     } catch (e) {
       print("erro doido de mais " + e);
       mensagemErro = e;

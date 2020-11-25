@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:xlo_mobx/screens/login/login_screen.dart';
+import 'package:xlo_mobx/stores/pagina_store.dart';
+import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
 
 class CabecalhoDrawer extends StatelessWidget {
+  final UsuarioGerenciadorStore usuarioGerenciadorStore = GetIt.I<UsuarioGerenciadorStore>();
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
-        Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => LoginScreen()),
-        );
+        if (usuarioGerenciadorStore.usuarioLogado) {
+          //de qualquer parte do app consigo ir para pagestore
+          GetIt.I<PaginaStore>().setPagina(4);
+        } else {
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (_) => LoginScreen()),
+          );
+        }
       },
       child: Container(
         color: Colors.purple,
@@ -39,7 +49,7 @@ class CabecalhoDrawer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            "Acesse sua conta agora!",
+            usuarioGerenciadorStore.usuarioLogado ? usuarioGerenciadorStore.usuario.nome : "Acesse sua conta agora!",
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,
@@ -47,7 +57,7 @@ class CabecalhoDrawer extends StatelessWidget {
             ),
           ),
           Text(
-            "Clique Aqui",
+            usuarioGerenciadorStore.usuarioLogado ? usuarioGerenciadorStore.usuario.email : "Clique Aqui",
             style: TextStyle(
               color: Colors.white,
               fontSize: 14,
