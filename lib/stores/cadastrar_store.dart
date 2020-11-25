@@ -80,7 +80,7 @@ abstract class _CadastrarStore with Store {
   void setSenha(String valor) => senha = valor;
 
   @computed
-  bool get senhaValida => senha != null && senha.length > 6;
+  bool get senhaValida => senha != null && senha.length >= 5;
 
   String get senhaErro {
     if (senha == null || senhaValida) {

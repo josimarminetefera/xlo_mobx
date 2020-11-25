@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:xlo_mobx/components/erro_box.dart';
 import 'package:xlo_mobx/screens/cadastrar/cadastrar_screen.dart';
 import 'package:xlo_mobx/stores/login_store.dart';
 
@@ -33,6 +34,14 @@ class LoginScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min, //altura minima
                   children: [
                     _tituloAcessarComEmail(),
+                    Observer(builder: (_) {
+                      return Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 8),
+                        child: ErroBox(
+                            mensagem: loginStore.mensagemErro
+                        ),
+                      );
+                    }),
                     _camposEmailSenha(),
                     _botaoEntrar(),
                     Divider(

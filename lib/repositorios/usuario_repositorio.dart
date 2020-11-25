@@ -37,4 +37,14 @@ class UsuarioRepositorio {
       dataCriacao: parseUser.get(USUARIODATACRIACAO),
     );
   }
+
+  Future<Usuario> loginEmail(String email, String senha) async {
+    final parseUser = ParseUser(email, senha, null);
+    final resposta = await parseUser.login();
+    if (resposta.success) {
+      return parseUserParaUsuario(resposta.result);
+    } else {
+      return Future.error(ParseErros.getDescription(resposta.error.code));
+    }
+  }
 }
