@@ -2,7 +2,7 @@ import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:mobx/mobx.dart';
+import 'package:xlo_mobx/components/erro_box.dart';
 import 'package:xlo_mobx/screens/cadastrar/widget/titulo_subtituilo.dart';
 import 'package:xlo_mobx/stores/cadastrar_store.dart';
 
@@ -54,6 +54,14 @@ class CadastrarScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        Observer(builder: (_){
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 8),
+            child: ErroBox(
+                mensagem: cadastrarStore.mensagemErro
+            ),
+          );
+        }),
         TituloSubtitulo(
           titulo: "Apelido",
           subtitulo: "Como aparecerá em seus anúncios.",

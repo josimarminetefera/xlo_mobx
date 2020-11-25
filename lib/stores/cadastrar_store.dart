@@ -111,6 +111,9 @@ abstract class _CadastrarStore with Store {
   }
 
   @observable
+  String mensagemErro;
+
+  @observable
   bool carregando = false;
 
   @computed
@@ -128,7 +131,13 @@ abstract class _CadastrarStore with Store {
       telefone: telefone,
       senha: senha,
     );
-    await UsuarioRepositorio().cadastrar(usuario);
+    try {
+      final resultado = await UsuarioRepositorio().cadastrar(usuario);
+      print(resultado);
+    } catch (e) {
+      print("erro doido de mais "+e);
+      mensagemErro = e;
+    }
     //await Future.delayed(Duration(seconds: 3));
     carregando = false;
   }

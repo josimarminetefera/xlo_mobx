@@ -141,6 +141,21 @@ mixin _$CadastrarStore on _CadastrarStore, Store {
     });
   }
 
+  final _$mensagemErroAtom = Atom(name: '_CadastrarStore.mensagemErro');
+
+  @override
+  String get mensagemErro {
+    _$mensagemErroAtom.reportRead();
+    return super.mensagemErro;
+  }
+
+  @override
+  set mensagemErro(String value) {
+    _$mensagemErroAtom.reportWrite(value, super.mensagemErro, () {
+      super.mensagemErro = value;
+    });
+  }
+
   final _$carregandoAtom = Atom(name: '_CadastrarStore.carregando');
 
   @override
@@ -229,6 +244,7 @@ email: ${email},
 telefone: ${telefone},
 senha: ${senha},
 senhaConfirmar: ${senhaConfirmar},
+mensagemErro: ${mensagemErro},
 carregando: ${carregando},
 nomeValido: ${nomeValido},
 emailValido: ${emailValido},

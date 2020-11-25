@@ -3,3 +3,4 @@ const USUARIONOME = "nome";
 const USUARIOEMAIL = "email";
 const USUARIOTELEFONE = "telefone";
 const USUARIOTIPO = "tipo";
+const USUARIODATACRIACAO = "createdAt";
