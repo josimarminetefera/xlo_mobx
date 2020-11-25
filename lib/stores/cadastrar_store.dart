@@ -24,7 +24,7 @@ abstract class _CadastrarStore with Store {
 
   //monitora caso de algum erro no campo de nome
   @computed
-  bool get nomeValido => nome != null && nome.length > 6;
+  bool get nomeValido => nome != null && nome.length >= 5;
 
   String get nomeErro {
     if (nome == null || nomeValido)
@@ -135,7 +135,7 @@ abstract class _CadastrarStore with Store {
       final resultado = await UsuarioRepositorio().cadastrar(usuario);
       print(resultado);
     } catch (e) {
-      print("erro doido de mais "+e);
+      print("erro doido de mais " + e);
       mensagemErro = e;
     }
     //await Future.delayed(Duration(seconds: 3));

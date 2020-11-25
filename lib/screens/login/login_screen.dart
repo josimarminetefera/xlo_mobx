@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:xlo_mobx/screens/cadastrar/cadastrar_screen.dart';
+import 'package:xlo_mobx/stores/login_store.dart';
 
 class LoginScreen extends StatelessWidget {
+  final LoginStore loginStore = LoginStore();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,13 +75,17 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(), //borda emvolta do botão
-            isDense: true,
-          ),
-          keyboardType: TextInputType.emailAddress,
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(), //borda emvolta do botão
+              isDense: true,
+              errorText: loginStore.emailErro,
+            ),
+            keyboardType: TextInputType.emailAddress,
+            onChanged: loginStore.setEmail,
+          );
+        }),
         const SizedBox(
           height: 16,
         ),
@@ -107,31 +115,39 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
         ),
-        TextField(
-          decoration: InputDecoration(
-            border: const OutlineInputBorder(),
-            isDense: true,
-          ),
-          obscureText: true,
-        ),
+        Observer(builder: (_) {
+          return TextField(
+            decoration: InputDecoration(
+              border: const OutlineInputBorder(),
+              isDense: true,
+              errorText: loginStore.senhaErro,
+            ),
+            obscureText: true,
+            onChanged: loginStore.setSenha,
+          );
+        }),
       ],
     );
   }
 
   Container _botaoEntrar() {
     return Container(
-      height: 50,
-      margin: EdgeInsets.only(top: 20, bottom: 12),
-      child: RaisedButton(
-        color: Colors.orange,
-        child: Text("Entrar"),
-        textColor: Colors.white,
-        elevation: 0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(25),
-        ),
-        onPressed: () {},
-      ),
+      child: Observer(builder: (_) {
+        return Container(
+          height: 50,
+          margin: EdgeInsets.only(top: 20, bottom: 12),
+          child: RaisedButton(
+            color: Colors.orange,
+            child: Text("Entrar"),
+            textColor: Colors.white,
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(25),
+            ),
+            onPressed: loginStore.loginPrecionado,
+          ),
+        );
+      }),
     );
   }
 
