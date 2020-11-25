@@ -61,6 +61,43 @@ mixin _$LoginStore on _LoginStore, Store {
     });
   }
 
+  final _$mensagemErroAtom = Atom(name: '_LoginStore.mensagemErro');
+
+  @override
+  String get mensagemErro {
+    _$mensagemErroAtom.reportRead();
+    return super.mensagemErro;
+  }
+
+  @override
+  set mensagemErro(String value) {
+    _$mensagemErroAtom.reportWrite(value, super.mensagemErro, () {
+      super.mensagemErro = value;
+    });
+  }
+
+  final _$carregandoAtom = Atom(name: '_LoginStore.carregando');
+
+  @override
+  bool get carregando {
+    _$carregandoAtom.reportRead();
+    return super.carregando;
+  }
+
+  @override
+  set carregando(bool value) {
+    _$carregandoAtom.reportWrite(value, super.carregando, () {
+      super.carregando = value;
+    });
+  }
+
+  final _$_loginAsyncAction = AsyncAction('_LoginStore._login');
+
+  @override
+  Future<void> _login() {
+    return _$_loginAsyncAction.run(() => super._login());
+  }
+
   final _$_LoginStoreActionController = ActionController(name: '_LoginStore');
 
   @override
@@ -90,6 +127,8 @@ mixin _$LoginStore on _LoginStore, Store {
     return '''
 email: ${email},
 senha: ${senha},
+mensagemErro: ${mensagemErro},
+carregando: ${carregando},
 emailValido: ${emailValido},
 senhaValida: ${senhaValida},
 loginPrecionado: ${loginPrecionado}

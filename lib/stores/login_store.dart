@@ -44,7 +44,22 @@ abstract class _LoginStore with Store {
     }
   }
 
+  @observable
+  String mensagemErro;
+
+  @observable
+  bool carregando = false;
+
   //login é valido e senha é valida
   @computed
-  Function get loginPrecionado => emailValido && senhaValida ? () {} : null;
+  Function get loginPrecionado => emailValido && senhaValida && !carregando ? _login : null;
+
+  @action
+  Future<void> _login() async {
+    carregando = true;
+
+    await Future.delayed(Duration(seconds: 3));
+
+    carregando = false;
+  }
 }

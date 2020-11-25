@@ -84,6 +84,7 @@ class LoginScreen extends StatelessWidget {
             ),
             keyboardType: TextInputType.emailAddress,
             onChanged: loginStore.setEmail,
+            enabled: !loginStore.carregando,
           );
         }),
         const SizedBox(
@@ -124,6 +125,7 @@ class LoginScreen extends StatelessWidget {
             ),
             obscureText: true,
             onChanged: loginStore.setSenha,
+            enabled: !loginStore.carregando,
           );
         }),
       ],
@@ -138,7 +140,12 @@ class LoginScreen extends StatelessWidget {
           margin: EdgeInsets.only(top: 20, bottom: 12),
           child: RaisedButton(
             color: Colors.orange,
-            child: Text("Entrar"),
+            disabledColor: Colors.orange.withAlpha(120),
+            child: loginStore.carregando
+                ? CircularProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation(Colors.white),
+                  )
+                : Text("Entrar"),
             textColor: Colors.white,
             elevation: 0,
             shape: RoundedRectangleBorder(
