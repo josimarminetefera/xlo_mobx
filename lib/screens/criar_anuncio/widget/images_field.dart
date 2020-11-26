@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:xlo_mobx/screens/criar_anuncio/widget/imagem_modal.dart';
 
 class ImagesField extends StatelessWidget {
   @override
@@ -21,12 +22,12 @@ class ImagesField extends StatelessWidget {
                 if (Platform.isAndroid) {
                   showModalBottomSheet(
                     context: context,
-                    builder: null,
+                    builder: (_) => ImagemModal(),
                   );
                 } else {
                   showCupertinoModalPopup(
                     context: context,
-                    builder: null,
+                    builder: (_) => ImagemModal(),
                   );
                 }
               },
