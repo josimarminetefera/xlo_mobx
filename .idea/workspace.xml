@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/repositorios/usuario_repositorio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositorios/usuario_repositorio.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/cadastrar/cadastrar_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/login_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/login_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stores/usuario_gerenciador_store.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stores/usuario_gerenciador_store.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="6b36a2f" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_29_x86" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
