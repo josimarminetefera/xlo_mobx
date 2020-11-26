@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
+import 'package:xlo_mobx/screens/criar_anuncio/criar_anuncio_screen.dart';
 import 'package:xlo_mobx/screens/principal/principal_screen.dart';
 import 'package:xlo_mobx/stores/pagina_store.dart';
 
@@ -36,7 +37,7 @@ class _BaseScreenState extends State<BaseScreen> {
         physics: NeverScrollableScrollPhysics(), //não move pelas laterais
         children: [
           PrincipalScreen(),
-          Container(color: Colors.red),
+          CriarAnuncioScreen(),
           Container(color: Colors.blue),
           Container(color: Colors.black),
           Container(color: Colors.yellow),
