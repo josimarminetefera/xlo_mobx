@@ -1,4 +1,4 @@
-import 'package:parse_server_sdk/parse_server_sdk.dart';
+import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 import 'package:xlo_mobx/repositorios/chave_repositorio.dart';
 import 'package:xlo_mobx/repositorios/parse_erros.dart';
 
@@ -46,5 +46,26 @@ class UsuarioRepositorio {
     } else {
       return Future.error(ParseErros.getDescription(resposta.error.code));
     }
+  }
+
+  Future<Usuario> pegarUsuarioLogado() async {
+    print("pegarUsuarioLogado");
+    //ultimo usuário logado no app
+    final ultimoUsuarioLogado = await ParseUser.currentUser();
+    print(ultimoUsuarioLogado);
+    if (ultimoUsuarioLogado != null) {
+      print("tem usuario");
+      print(ultimoUsuarioLogado);
+      final resposta = await ParseUser.getCurrentUserFromServer(ultimoUsuarioLogado.sessionToken);
+      if (resposta.success) {
+        print("tem usuário logado com sucesso");
+        //usuário ainda é valido
+        return parseUserParaUsuario(resposta.result);
+      } else {
+        //não é mais valido
+        await ultimoUsuarioLogado.logout();
+      }
+    }
+    return null;
   }
 }

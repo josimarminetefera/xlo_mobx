@@ -119,7 +119,7 @@ class CadastrarScreen extends StatelessWidget {
             keyboardType: TextInputType.phone,
             autocorrect: false,
             inputFormatters: [
-              WhitelistingTextInputFormatter.digitsOnly, //só aceita passar
+              FilteringTextInputFormatter.digitsOnly, //só aceita passar
               TelefoneInputFormatter(), //mascara de telefone
             ],
             onChanged: cadastrarStore.setTelefone,

@@ -63,6 +63,7 @@ abstract class _LoginStore with Store {
     try {
       final usuario = await UsuarioRepositorio().loginEmail(email, senha);
       //setando no sigleton o usuário quye logou para poder acessar ele de qualquer lugar
+      print(usuario);
       GetIt.I<UsuarioGerenciadorStore>().setUsuario(usuario);
     } catch (e) {
       mensagemErro = e;
