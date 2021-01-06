@@ -2,12 +2,13 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ImagemModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("imagem_modal build()");
-    if ( Platform.isAndroid) {
+    if (Platform.isAndroid) {
       return BottomSheet(
         onClosing: () {}, //quando fecha o modal
         builder: (_) => Column(
@@ -15,11 +16,11 @@ class ImagemModal extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch, //para tudo que está dentro ocupar tudo mesmo
           children: [
             FlatButton(
-              onPressed: () {},
+              onPressed: abrirCamera,
               child: Text("Camera"),
             ),
             FlatButton(
-              onPressed: () {},
+              onPressed: abrirGaleria,
               child: Text("Galeria"),
             ),
           ],
@@ -42,15 +43,32 @@ class ImagemModal extends StatelessWidget {
         ),
         actions: [
           CupertinoActionSheetAction(
-            onPressed: () {},
+            onPressed: abrirCamera, //esta sem parametro () porque o onpressed não recebe parametros
             child: Text("Camera"),
           ),
           CupertinoActionSheetAction(
-            onPressed: () {},
+            onPressed: abrirGaleria,
             child: Text("Galeria"),
           ),
         ],
       );
     }
+  }
+
+  void abrirCamera() async {
+    final imagePicker = await ImagePicker().getImage(source: ImageSource.camera);
+    //recuperar o arquivo
+    final imagem = File(imagePicker.path);
+    imagemSelecionada(imagem);
+  }
+
+  void abrirGaleria() async {
+    final imagePicker = await ImagePicker().getImage(source: ImageSource.gallery);
+    final imagem = File(imagePicker.path);
+    imagemSelecionada(imagem);
+  }
+
+  void imagemSelecionada(File imagem) {
+    print(imagem.path);
   }
 }

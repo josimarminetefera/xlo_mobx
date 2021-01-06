@@ -75,7 +75,7 @@
         <entry key="build_runner">
           <value>
             <list>
-              <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_runner-1.10.6/lib" />
+              <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_runner-1.10.11/lib" />
             </list>
           </value>
         </entry>
@@ -254,6 +254,13 @@
             </list>
           </value>
         </entry>
+        <entry key="flutter_plugin_android_lifecycle">
+          <value>
+            <list>
+              <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="flutter_test">
           <value>
             <list>
@@ -314,6 +321,20 @@
           <value>
             <list>
               <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/idb_shim-1.12.2+1/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker">
+          <value>
+            <list>
+              <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+17/lib" />
+            </list>
+          </value>
+        </entry>
+        <entry key="image_picker_platform_interface">
+          <value>
+            <list>
+              <option value="D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-1.1.1/lib" />
             </list>
           </value>
         </entry>
@@ -813,7 +834,7 @@
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_config-0.4.3/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_daemon-2.1.4/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_resolvers-1.4.3/lib" />
-      <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_runner-1.10.6/lib" />
+      <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_runner-1.10.11/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/build_runner_core-6.1.1/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/built_collection-4.3.2/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/built_value-7.1.0/lib" />
@@ -838,6 +859,7 @@
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/file-5.2.1/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/fixnum-0.10.11/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_mobx-1.1.0+2/lib" />
+      <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-1.0.11/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/get_it-5.0.1/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/glob-1.2.0/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/graphs-0.2.0/lib" />
@@ -845,6 +867,8 @@
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/http_multi_server-2.2.0/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-3.1.4/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/idb_shim-1.12.2+1/lib" />
+      <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker-0.6.7+17/lib" />
+      <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/image_picker_platform_interface-1.1.1/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/io-0.3.4/lib" />
       <root url="file://D:/src/flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.2/lib" />

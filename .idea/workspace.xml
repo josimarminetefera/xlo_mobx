@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/imagem_modal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/imagem_modal.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,22 +79,22 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606484525020" />
-    <state width="1300" height="220" key="GridCell.Tab.0.bottom" timestamp="1609966092034">
+    <state width="1300" height="220" key="GridCell.Tab.0.bottom" timestamp="1609972431868">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609966092034" />
-    <state width="1300" height="220" key="GridCell.Tab.0.center" timestamp="1609966092033">
+    <state width="1300" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609972431868" />
+    <state width="1300" height="220" key="GridCell.Tab.0.center" timestamp="1609972431867">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="220" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609966092033" />
-    <state width="1300" height="220" key="GridCell.Tab.0.left" timestamp="1609966092032">
+    <state width="1300" height="220" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609972431867" />
+    <state width="1300" height="220" key="GridCell.Tab.0.left" timestamp="1609972431867">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="220" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609966092032" />
-    <state width="1300" height="220" key="GridCell.Tab.0.right" timestamp="1609966092033">
+    <state width="1300" height="220" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609972431867" />
+    <state width="1300" height="220" key="GridCell.Tab.0.right" timestamp="1609972431868">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="220" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609966092033" />
+    <state width="1300" height="220" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1609972431868" />
     <state x="-1056" y="66" key="RollbackChangesDialog" timestamp="1609964391059">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
