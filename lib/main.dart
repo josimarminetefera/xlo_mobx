@@ -6,6 +6,7 @@ import 'package:xlo_mobx/stores/pagina_store.dart';
 import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
 
 Future<void> main() async {
+  print("main main()");
   WidgetsFlutterBinding.ensureInitialized();
   //antes de abrir o app ele tem que iniciar o parse.
   await iniciarParse();
@@ -14,6 +15,7 @@ Future<void> main() async {
 }
 
 Future<void> iniciarParse() async {
+  print("main iniciarParse()");
   await Parse().initialize(
     '0xq3RbEIMesezRh1k93BjekPb2XWkdjDOyzBUJ9f',
     'https://parseapi.back4app.com/',
@@ -25,6 +27,7 @@ Future<void> iniciarParse() async {
 
 //Com isso aqui eu posso acessar a intancia de PageStore de qualquer local do app.
 void setupLocators() {
+  print("main setupLocators()");
   //Singleton tem um valor só no app inteiro acessivel de qualquer parte do app
   GetIt.I.registerSingleton(PaginaStore());
   GetIt.I.registerSingleton(UsuarioGerenciadorStore());
@@ -33,6 +36,7 @@ void setupLocators() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("main build()");
     return MaterialApp(
       title: 'XLO',
       debugShowCheckedModeBanner: false,

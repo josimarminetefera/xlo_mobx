@@ -11,6 +11,7 @@ class CadastrarScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("cadastrar_screen build()");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Cadastro"),
@@ -51,6 +52,7 @@ class CadastrarScreen extends StatelessWidget {
   }
 
   Column _formularioCadastro() {
+    print("cadastrar_screen _formularioCadastro()");
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -168,6 +170,7 @@ class CadastrarScreen extends StatelessWidget {
   }
 
   Widget _botaoCadastrar() {
+    print("cadastrar_screen _botaoCadastrar()");
     return Observer(builder: (_) {
       return Container(
         height: 50,
@@ -192,6 +195,7 @@ class CadastrarScreen extends StatelessWidget {
   }
 
   Widget _opcaoEntrar(BuildContext context) {
+    print("cadastrar_screen _opcaoEntrar()");
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Row(

@@ -18,6 +18,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   void initState() {
     super.initState();
+    print("base_screen initState()");
 
     //será que não seria melhor mandar isso lá para o page_section?????
     //sempre que for clicada no menu lateral vai atualizar a pagina atualizando a pagina isso aqui aciona
@@ -29,6 +30,7 @@ class _BaseScreenState extends State<BaseScreen> {
 
   @override
   Widget build(BuildContext context) {
+    print("base_screen build()");
     //base do layout
     return Scaffold(
       //melhor forma de navegar por páginas

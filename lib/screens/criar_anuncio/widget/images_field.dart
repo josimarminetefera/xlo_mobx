@@ -7,6 +7,7 @@ import 'package:xlo_mobx/screens/criar_anuncio/widget/imagem_modal.dart';
 class ImagesField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("imagem_field build()");
     return Container(
       color: Colors.grey[200],
       height: 120,

@@ -9,6 +9,7 @@ class UsuarioGerenciadorStore = _UsuarioGerenciadorStore with _$UsuarioGerenciad
 
 abstract class _UsuarioGerenciadorStore with Store {
   _UsuarioGerenciadorStore() {
+    print("usuario_gerenciador_store _UsuarioGerenciadorStore()");
     _pegarUsuarioLogado();
   }
 
@@ -22,6 +23,7 @@ abstract class _UsuarioGerenciadorStore with Store {
   bool get usuarioLogado => usuario != null;
 
   Future<void> _pegarUsuarioLogado() async {
+    print("usuario_gerenciador_store _pegarUsuarioLogado()");
     final usuario = await UsuarioRepositorio().pegarUsuarioLogado();
     //caso tenha um usário logado eu coloco ele como logado
     //setUsuario(usuario);

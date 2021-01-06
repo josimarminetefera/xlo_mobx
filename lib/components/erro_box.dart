@@ -7,6 +7,7 @@ class ErroBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("erro_box build()");
     if (mensagem == null) {
       return Container();
     } else {

@@ -9,6 +9,11 @@ part 'login_store.g.dart';
 class LoginStore = _LoginStore with _$LoginStore;
 
 abstract class _LoginStore with Store {
+
+  _LoginStore() {
+    print("login_store _LoginStore()");
+  }
+
   @observable
   String email;
 
@@ -59,6 +64,7 @@ abstract class _LoginStore with Store {
 
   @action
   Future<void> _login() async {
+    print("login_store _login()");
     carregando = true;
     try {
       final usuario = await UsuarioRepositorio().loginEmail(email, senha);

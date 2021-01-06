@@ -9,6 +9,7 @@ class CabecalhoDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("cabecalho_drawer build()");
     return GestureDetector(
       onTap: () {
         Navigator.of(context).pop();
@@ -43,6 +44,7 @@ class CabecalhoDrawer extends StatelessWidget {
   }
 
   Expanded _conteudoCabecalho() {
+    print("cabecalho_drawer _conteudoCabecalho()");
     return Expanded(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

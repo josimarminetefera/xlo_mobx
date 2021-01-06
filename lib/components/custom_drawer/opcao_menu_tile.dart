@@ -10,6 +10,7 @@ class OpcaoMenuTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("opcao_menu_tile build()");
     return ListTile(
       title: Text(
         lable,

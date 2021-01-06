@@ -19,6 +19,7 @@ class _BuscarDialogState extends State<BuscarDialog> {
 
   @override
   Widget build(BuildContext context) {
+    print("buscar_dialog build()");
     //caixa que adicionado sobre as outras com tamanho específico
     return Stack(
       children: [

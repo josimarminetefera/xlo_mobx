@@ -6,6 +6,7 @@ import '../models/usuario.dart';
 
 class UsuarioRepositorio {
   Future<Usuario> cadastrar(Usuario usuario) async {
+    print("usuario_repositorio cadastrar()");
     final parseUser = ParseUser(
       usuario.email,
       usuario.senha,
@@ -28,6 +29,7 @@ class UsuarioRepositorio {
 
   //ler todos parametros do parse e mandar para o usuario
   Usuario parseUserParaUsuario(ParseUser parseUser) {
+    print("usuario_repositorio parseUserParaUsuario()");
     return Usuario(
       id: parseUser.objectId,
       nome: parseUser.get(USUARIONOME),
@@ -39,6 +41,7 @@ class UsuarioRepositorio {
   }
 
   Future<Usuario> loginEmail(String email, String senha) async {
+    print("usuario_repositorio loginEmail()");
     final parseUser = ParseUser(email, senha, null);
     final resposta = await parseUser.login();
     if (resposta.success) {
@@ -49,16 +52,16 @@ class UsuarioRepositorio {
   }
 
   Future<Usuario> pegarUsuarioLogado() async {
-    print("pegarUsuarioLogado");
+    print("usuario_repositorio pegarUsuarioLogado()");
     //ultimo usuário logado no app
     final ultimoUsuarioLogado = await ParseUser.currentUser();
-    print(ultimoUsuarioLogado);
+    print("usuario_repositorio "+ultimoUsuarioLogado.toString());
     if (ultimoUsuarioLogado != null) {
-      print("tem usuario");
+      print("usuario_repositorio tem usuario");
       print(ultimoUsuarioLogado);
       final resposta = await ParseUser.getCurrentUserFromServer(ultimoUsuarioLogado.sessionToken);
       if (resposta.success) {
-        print("tem usuário logado com sucesso");
+        print("usuario_repositorio tem usuário logado com sucesso");
         //usuário ainda é valido
         return parseUserParaUsuario(resposta.result);
       } else {

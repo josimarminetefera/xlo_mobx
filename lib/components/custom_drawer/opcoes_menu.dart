@@ -8,6 +8,7 @@ class OpcoesMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("opcao_menu build()");
     return Column(
       children: [
         OpcaoMenuTile(

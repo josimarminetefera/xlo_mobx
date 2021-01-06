@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("login_screen build()");
     return Scaffold(
       appBar: AppBar(
         title: const Text("Entrar"),
@@ -59,6 +60,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Text _tituloAcessarComEmail() {
+    print("login_screen _tituloAcessarComEmail()");
     return Text(
       "Acessar com E-mail:",
       textAlign: TextAlign.center,
@@ -70,6 +72,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Column _camposEmailSenha() {
+    print("login_screen _camposEmailSenha()");
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
@@ -142,6 +145,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Container _botaoEntrar() {
+    print("login_screen _botaoEntrar()");
     return Container(
       child: Observer(builder: (_) {
         return Container(
@@ -168,6 +172,7 @@ class LoginScreen extends StatelessWidget {
   }
 
   Padding _opcaoCadastrar(context) {
+    print("login_screen _opcaoCadastrar()");
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8),
       child: Wrap(

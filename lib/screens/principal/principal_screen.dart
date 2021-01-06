@@ -5,6 +5,7 @@ import 'package:xlo_mobx/screens/principal/widgets/buscar_dialog.dart';
 class PrincipalScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("principal_screen build()");
     _abrirBuscar(String textoAtual) async {
       // o que retormar la do meu buscar eu guardo dentro da variavel texto digitado.
       final String textoDigitado = await showDialog(

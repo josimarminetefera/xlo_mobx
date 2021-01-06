@@ -15,6 +15,7 @@ class CriarAnuncioScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("criar_anuncio_screen build()");
     return Scaffold(
       drawer: CustomDrawer(),
       appBar: AppBar(

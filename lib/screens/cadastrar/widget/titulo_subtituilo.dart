@@ -8,6 +8,7 @@ class TituloSubtitulo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("titulo_subtitulo build()");
     return Padding(
       padding: const EdgeInsets.only(left: 3, bottom: 4),
       child: Wrap(

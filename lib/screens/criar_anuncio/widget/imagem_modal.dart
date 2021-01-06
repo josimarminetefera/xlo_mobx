@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ImagemModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    print("imagem_modal build()");
     return BottomSheet(
       onClosing: () {},
       builder: (_) => Column(

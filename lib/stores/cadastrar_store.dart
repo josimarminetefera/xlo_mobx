@@ -12,6 +12,7 @@ class CadastrarStore = _CadastrarStore with _$CadastrarStore;
 abstract class _CadastrarStore with Store {
   //bom para debugar
   _CadastrarStore() {
+    print("cadastrar_store _CadastrarStore()");
     autorun((_) {
       // print(senha);
       // print(senhaConfirmar);
@@ -126,6 +127,7 @@ abstract class _CadastrarStore with Store {
 
   @action
   Future<void> _cadastrar() async {
+    print("cadastrar_store _cadastrar()");
     carregando = true;
     final usuario = Usuario(
       nome: nome,
