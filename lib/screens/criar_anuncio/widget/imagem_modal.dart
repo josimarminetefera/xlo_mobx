@@ -2,9 +2,15 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImagemModal extends StatelessWidget {
+  ImagemModal(this.adicionarImagemNaTela);
+
+  //esta função aqui é executada la no image_modal
+  final Function(File) adicionarImagemNaTela;
+
   @override
   Widget build(BuildContext context) {
     print("imagem_modal build()");
@@ -56,19 +62,40 @@ class ImagemModal extends StatelessWidget {
   }
 
   void abrirCamera() async {
+    print("imagem_modal abrirCamera()");
     final imagePicker = await ImagePicker().getImage(source: ImageSource.camera);
+    if(imagePicker == null) return;
     //recuperar o arquivo
     final imagem = File(imagePicker.path);
     imagemSelecionada(imagem);
   }
 
   void abrirGaleria() async {
+    print("imagem_modal abrirGaleria()");
     final imagePicker = await ImagePicker().getImage(source: ImageSource.gallery);
+    if(imagePicker == null) return;
+    //recuperar o arquivo
     final imagem = File(imagePicker.path);
     imagemSelecionada(imagem);
   }
 
-  void imagemSelecionada(File imagem) {
+  Future<void> imagemSelecionada(File imagem) async {
+    print("imagem_modal imagemSelecionada()");
     print(imagem.path);
+    final imagemCortada = await ImageCropper.cropImage(
+      sourcePath: imagem.path,
+      aspectRatio: CropAspectRatio(ratioX: 1, ratioY: 1),
+      androidUiSettings: AndroidUiSettings(
+        toolbarTitle: "Editar Imagem",
+        toolbarColor: Colors.purple,
+        toolbarWidgetColor: Colors.white,
+      ),
+      iosUiSettings: IOSUiSettings(
+        title: "Editar Imagem",
+        cancelButtonTitle: "Cancelar",
+        doneButtonTitle: "Concluir",
+      ),
+    );
+    adicionarImagemNaTela(imagemCortada);
   }
 }

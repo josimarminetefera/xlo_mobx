@@ -8,6 +8,13 @@ class ImagesField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     print("imagem_field build()");
+
+    //isso aqui é um callback que abre a imagem apos editar ela
+    void adicionarImagemNaTela(File imagem) {
+      print("imagem_field adicionarImagemNaTela()");
+      Navigator.of(context).pop();
+    }
+
     return Container(
       color: Colors.grey[200],
       height: 120,
@@ -23,12 +30,12 @@ class ImagesField extends StatelessWidget {
                 if (Platform.isAndroid) {
                   showModalBottomSheet(
                     context: context,
-                    builder: (_) => ImagemModal(),
+                    builder: (_) => ImagemModal(adicionarImagemNaTela),
                   );
                 } else {
                   showCupertinoModalPopup(
                     context: context,
-                    builder: (_) => ImagemModal(),
+                    builder: (_) => ImagemModal(adicionarImagemNaTela),
                   );
                 }
               },
