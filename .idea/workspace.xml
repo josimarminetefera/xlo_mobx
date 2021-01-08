@@ -10,9 +10,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/criar_anuncio/criar_anuncio_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/criar_anuncio/criar_anuncio_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/imagem_modal.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/imagem_modal.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/images_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/images_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/cadastrar_store.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/login_store.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/pagina_store.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stores/usuario_gerenciador_store.g.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +45,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../todo_mobx" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -73,30 +77,30 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606262088460" />
-    <state x="-950" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606488908913">
+    <state x="-950" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610142986926">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-950" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606488908913" />
-    <state x="-900" y="119" key="FileChooserDialogImpl" timestamp="1606484525020">
+    <state x="-950" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610142986926" />
+    <state x="-900" y="119" key="FileChooserDialogImpl" timestamp="1610148276552">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606484525020" />
-    <state width="1300" height="173" key="GridCell.Tab.0.bottom" timestamp="1610055303956">
+    <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610148276552" />
+    <state width="1300" height="173" key="GridCell.Tab.0.bottom" timestamp="1610146794211">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610055303956" />
-    <state width="1300" height="173" key="GridCell.Tab.0.center" timestamp="1610055303956">
+    <state width="1300" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
+    <state width="1300" height="173" key="GridCell.Tab.0.center" timestamp="1610146794211">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610055303956" />
-    <state width="1300" height="173" key="GridCell.Tab.0.left" timestamp="1610055303956">
+    <state width="1300" height="173" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
+    <state width="1300" height="173" key="GridCell.Tab.0.left" timestamp="1610146794211">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610055303956" />
-    <state width="1300" height="173" key="GridCell.Tab.0.right" timestamp="1610055303956">
+    <state width="1300" height="173" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
+    <state width="1300" height="173" key="GridCell.Tab.0.right" timestamp="1610146794211">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610055303956" />
+    <state width="1300" height="173" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
     <state x="-1056" y="66" key="RollbackChangesDialog" timestamp="1609964391059">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
@@ -109,10 +113,14 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-984" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606484230959" />
-    <state x="-952" y="122" width="737" height="606" key="find.popup" timestamp="1606353016653">
+    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610149746200">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-952" y="122" width="737" height="606" key="find.popup/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606353016653" />
+    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610149746200" />
+    <state x="-952" y="122" width="737" height="606" key="find.popup" timestamp="1610142300568">
+      <screen x="-1360" y="0" width="1360" height="728" />
+    </state>
+    <state x="-952" y="122" width="737" height="606" key="find.popup/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610142300568" />
     <state x="-1024" y="162" key="run.anything.popup" timestamp="1606179685152">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>

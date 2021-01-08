@@ -64,7 +64,7 @@ class ImagemModal extends StatelessWidget {
   void abrirCamera() async {
     print("imagem_modal abrirCamera()");
     final imagePicker = await ImagePicker().getImage(source: ImageSource.camera);
-    if(imagePicker == null) return;
+    if (imagePicker == null) return;
     //recuperar o arquivo
     final imagem = File(imagePicker.path);
     imagemSelecionada(imagem);
@@ -73,7 +73,7 @@ class ImagemModal extends StatelessWidget {
   void abrirGaleria() async {
     print("imagem_modal abrirGaleria()");
     final imagePicker = await ImagePicker().getImage(source: ImageSource.gallery);
-    if(imagePicker == null) return;
+    if (imagePicker == null) return;
     //recuperar o arquivo
     final imagem = File(imagePicker.path);
     imagemSelecionada(imagem);
@@ -96,6 +96,8 @@ class ImagemModal extends StatelessWidget {
         doneButtonTitle: "Concluir",
       ),
     );
-    adicionarImagemNaTela(imagemCortada);
+    if (imagemCortada != null) {
+      adicionarImagemNaTela(imagemCortada);
+    }
   }
 }

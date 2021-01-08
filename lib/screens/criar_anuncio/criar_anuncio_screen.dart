@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xlo_mobx/components/custom_drawer/custom_drawer.dart';
 import 'package:xlo_mobx/screens/criar_anuncio/widget/images_field.dart';
+import 'package:xlo_mobx/stores/criar_anuncio_store.dart';
 
 class CriarAnuncioScreen extends StatelessWidget {
+  final CriarAnuncioStore criarAnuncioStore = CriarAnuncioStore();
+
   final labelStyle = TextStyle(
     fontWeight: FontWeight.w800,
     color: Colors.grey,
@@ -23,7 +26,7 @@ class CriarAnuncioScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Card(
-        clipBehavior: Clip.antiAlias,//isso aqui deixa os cantos arredondados e cortados
+        clipBehavior: Clip.antiAlias, //isso aqui deixa os cantos arredondados e cortados
         margin: const EdgeInsets.symmetric(horizontal: 16),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
@@ -31,7 +34,7 @@ class CriarAnuncioScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            ImagesField(),
+            ImagesField(criarAnuncioStore),
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Título *',
