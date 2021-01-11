@@ -29,62 +29,74 @@ class ImagesField extends StatelessWidget {
       child: Observer(
         builder: (context) {
           print("-------------" + criarAnuncioStore.imagens.length.toString());
-          return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: criarAnuncioStore.imagens.length + 1,
-            itemBuilder: (_, index) {
-              if (index == criarAnuncioStore.imagens.length) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-                  child: GestureDetector(
-                    onTap: () {
-                      //a camera abre de duas formas deiferentes em cada dispositivo
-                      if (Platform.isAndroid) {
-                        showModalBottomSheet(
-                          context: context,
-                          builder: (_) => ImagemModal(adicionarImagemNaTela),
-                        );
-                      } else {
-                        showCupertinoModalPopup(
-                          context: context,
-                          builder: (_) => ImagemModal(adicionarImagemNaTela),
-                        );
-                      }
-                    },
-                    child: CircleAvatar(
-                      radius: 44,
-                      backgroundColor: Colors.grey[300],
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.photo_camera_sharp,
-                            size: 40,
-                            color: Colors.white,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                );
-              } else {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
-                  child: GestureDetector(
-                    onTap: () {},
-                    onDoubleTap: () {
-                      print("teste");
-                    },
-                    child: CircleAvatar(
-                      radius: 44,
-                      backgroundImage: FileImage(criarAnuncioStore.imagens[index]),
-                    ),
-                  ),
-                );
-              }
-            },
-          );
+          return criarListaDeImagens(context, adicionarImagemNaTela);
         },
+      ),
+    );
+  }
+
+  ListView criarListaDeImagens(BuildContext context, void adicionarImagemNaTela(File imagem)) {
+    return ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemCount: criarAnuncioStore.imagens.length + 1,
+      itemBuilder: (_, index) {
+        if (index == criarAnuncioStore.imagens.length) {
+          return novaImagemPadrao(context, adicionarImagemNaTela);
+        } else {
+          return imagemSelecionada(index);
+        }
+      },
+    );
+  }
+
+  Padding imagemSelecionada(int index) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+      child: GestureDetector(
+        onTap: () {},
+        onDoubleTap: () {
+          print("teste");
+        },
+        child: CircleAvatar(
+          radius: 44,
+          backgroundImage: FileImage(criarAnuncioStore.imagens[index]),
+        ),
+      ),
+    );
+  }
+
+  Padding novaImagemPadrao(BuildContext context, void adicionarImagemNaTela(File imagem)) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 16, 0, 16),
+      child: GestureDetector(
+        onTap: () {
+          //a camera abre de duas formas deiferentes em cada dispositivo
+          if (Platform.isAndroid) {
+            showModalBottomSheet(
+              context: context,
+              builder: (_) => ImagemModal(adicionarImagemNaTela),
+            );
+          } else {
+            showCupertinoModalPopup(
+              context: context,
+              builder: (_) => ImagemModal(adicionarImagemNaTela),
+            );
+          }
+        },
+        child: CircleAvatar(
+          radius: 44,
+          backgroundColor: Colors.grey[300],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.photo_camera_sharp,
+                size: 40,
+                color: Colors.white,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
