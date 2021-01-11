@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e26998e0-8e0c-40f5-b806-f6f6be4fbc2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/models/categoria.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/repositorios/catagoria_repositorio.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/images_field.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/criar_anuncio/widget/images_field.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/repositorios/chave_repositorio.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/repositorios/chave_repositorio.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +66,10 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-927" y="167" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1604864401903" />
-    <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1606262088460">
+    <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1610403162501">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606262088460" />
+    <state x="-875" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610403162501" />
     <state x="-950" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610142986926">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
@@ -74,22 +78,22 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-900" y="119" key="FileChooserDialogImpl/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610148276552" />
-    <state width="1300" height="173" key="GridCell.Tab.0.bottom" timestamp="1610146794211">
+    <state width="1300" height="173" key="GridCell.Tab.0.bottom" timestamp="1610405569151">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
-    <state width="1300" height="173" key="GridCell.Tab.0.center" timestamp="1610146794211">
+    <state width="1300" height="173" key="GridCell.Tab.0.bottom/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610405569151" />
+    <state width="1300" height="173" key="GridCell.Tab.0.center" timestamp="1610405569150">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
-    <state width="1300" height="173" key="GridCell.Tab.0.left" timestamp="1610146794211">
+    <state width="1300" height="173" key="GridCell.Tab.0.center/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610405569150" />
+    <state width="1300" height="173" key="GridCell.Tab.0.left" timestamp="1610405569149">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
-    <state width="1300" height="173" key="GridCell.Tab.0.right" timestamp="1610146794211">
+    <state width="1300" height="173" key="GridCell.Tab.0.left/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610405569149" />
+    <state width="1300" height="173" key="GridCell.Tab.0.right" timestamp="1610405569150">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state width="1300" height="173" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610146794211" />
+    <state width="1300" height="173" key="GridCell.Tab.0.right/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610405569150" />
     <state x="-1056" y="66" key="RollbackChangesDialog" timestamp="1609964391059">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
@@ -102,10 +106,10 @@
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
     <state x="-984" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1606484230959" />
-    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610149746200">
+    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610404849162">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>
-    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610149746200" />
+    <state x="-871" y="278" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728/-1360.0.1360.728@-1360.0.1360.728" timestamp="1610404849162" />
     <state x="-952" y="122" width="737" height="606" key="find.popup" timestamp="1610142300568">
       <screen x="-1360" y="0" width="1360" height="728" />
     </state>

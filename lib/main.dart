@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
+import 'package:xlo_mobx/repositorios/catagoria_repositorio.dart';
 import 'package:xlo_mobx/screens/base/base_screen.dart';
 import 'package:xlo_mobx/stores/pagina_store.dart';
 import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
@@ -23,6 +24,11 @@ Future<void> iniciarParse() async {
     autoSendSessionId: true, //nossa identiuficação sempre estara aberta para não ter que informar cada vez que ue usar
     debug: true, // para mostrar no terminal tudo que está acontecendo no parse.
   );
+
+  //verificar se as categorias estão ok
+  final categorias = await CategoriaRepositorio().buscarListaCategorias();
+  print("main ....................... ");
+  print(categorias);
 }
 
 //Com isso aqui eu posso acessar a intancia de PageStore de qualquer local do app.
