@@ -29,30 +29,32 @@ class ImagesField extends StatelessWidget {
       child: Observer(
         builder: (context) {
           print("imagem_field -------------" + criarAnuncioStore.imagens.length.toString());
-          return criarListaDeImagens(context, adicionarImagemNaTela);
+          return ListView.builder(
+            scrollDirection: Axis.horizontal,
+            itemCount: criarAnuncioStore.imagens.length < 5 ? criarAnuncioStore.imagens.length + 1 : 5,
+            //só é permitido cadastrar até 5 imagens
+            itemBuilder: (_, index) {
+              if (index == criarAnuncioStore.imagens.length) {
+                return imagemNova(context, index, adicionarImagemNaTela);
+              } else {
+                return imagemSelecionada(index);
+              }
+            },
+          );
         },
       ),
     );
   }
 
-  ListView criarListaDeImagens(BuildContext context, void adicionarImagemNaTela(File imagem)) {
-    return ListView.builder(
-      scrollDirection: Axis.horizontal,
-      itemCount: criarAnuncioStore.imagens.length < 5 ? criarAnuncioStore.imagens.length + 1 : 5,
-      //só é permitido cadastrar até 5 imagens
-      itemBuilder: (_, index) {
-        if (index == criarAnuncioStore.imagens.length) {
-          return novaImagemPadrao(context, adicionarImagemNaTela, index);
-        } else {
-          return imagemSelecionada(index);
-        }
-      },
-    );
-  }
-
   Padding imagemSelecionada(int index) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 8, 0, 8),
+      //na direita só vai ter paddin se este for o ultimo item
+      padding: EdgeInsets.fromLTRB(
+        8,
+        16,
+        index == 4 ? 8 : 0,
+        16,
+      ),
       child: GestureDetector(
         onTap: () {},
         onDoubleTap: () {
@@ -66,13 +68,12 @@ class ImagesField extends StatelessWidget {
     );
   }
 
-  Padding novaImagemPadrao(BuildContext context, void adicionarImagemNaTela(File imagem), int index) {
+  Padding imagemNova(BuildContext context, int index, void adicionarImagemNaTela(File imagem)) {
     return Padding(
-      //na direita só vai ter paddin se este for o ultimo item
       padding: EdgeInsets.fromLTRB(
         8,
         16,
-        index == 4 ? 8 : 0, //caso seja a ultima imagem
+        8, //este aqui sempre estará com 8
         16,
       ),
       child: GestureDetector(
