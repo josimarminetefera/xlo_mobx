@@ -25,10 +25,10 @@ class ImagesField extends StatelessWidget {
 
     return Container(
       color: Colors.grey[200],
-      height: 120,
+      height: 120, //tamanho da imagem
       child: Observer(
         builder: (context) {
-          print("-------------" + criarAnuncioStore.imagens.length.toString());
+          print("imagem_field -------------" + criarAnuncioStore.imagens.length.toString());
           return criarListaDeImagens(context, adicionarImagemNaTela);
         },
       ),
@@ -38,10 +38,11 @@ class ImagesField extends StatelessWidget {
   ListView criarListaDeImagens(BuildContext context, void adicionarImagemNaTela(File imagem)) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: criarAnuncioStore.imagens.length + 1,
+      itemCount: criarAnuncioStore.imagens.length < 5 ? criarAnuncioStore.imagens.length + 1 : 5,
+      //só é permitido cadastrar até 5 imagens
       itemBuilder: (_, index) {
         if (index == criarAnuncioStore.imagens.length) {
-          return novaImagemPadrao(context, adicionarImagemNaTela);
+          return novaImagemPadrao(context, adicionarImagemNaTela, index);
         } else {
           return imagemSelecionada(index);
         }
@@ -65,9 +66,15 @@ class ImagesField extends StatelessWidget {
     );
   }
 
-  Padding novaImagemPadrao(BuildContext context, void adicionarImagemNaTela(File imagem)) {
+  Padding novaImagemPadrao(BuildContext context, void adicionarImagemNaTela(File imagem), int index) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(8, 16, 0, 16),
+      //na direita só vai ter paddin se este for o ultimo item
+      padding: EdgeInsets.fromLTRB(
+        8,
+        16,
+        index == 4 ? 8 : 0, //caso seja a ultima imagem
+        16,
+      ),
       child: GestureDetector(
         onTap: () {
           //a camera abre de duas formas deiferentes em cada dispositivo
