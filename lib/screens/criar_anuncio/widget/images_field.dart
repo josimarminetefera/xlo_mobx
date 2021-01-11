@@ -7,6 +7,8 @@ import 'package:mobx/mobx.dart';
 import 'package:xlo_mobx/screens/criar_anuncio/widget/imagem_modal.dart';
 import 'package:xlo_mobx/stores/criar_anuncio_store.dart';
 
+import 'mostrar_imagem_tela.dart';
+
 class ImagesField extends StatelessWidget {
   ImagesField(this.criarAnuncioStore);
 
@@ -37,7 +39,7 @@ class ImagesField extends StatelessWidget {
               if (index == criarAnuncioStore.imagens.length) {
                 return imagemNova(context, index, adicionarImagemNaTela);
               } else {
-                return imagemSelecionada(index);
+                return imagemSelecionada(context, index);
               }
             },
           );
@@ -46,17 +48,26 @@ class ImagesField extends StatelessWidget {
     );
   }
 
-  Padding imagemSelecionada(int index) {
+  Padding imagemSelecionada(BuildContext context, int index) {
     return Padding(
       //na direita só vai ter paddin se este for o ultimo item
-      padding: EdgeInsets.fromLTRB(
-        8,
-        16,
-        index == 4 ? 8 : 0,
-        16,
-      ),
+      padding: EdgeInsets.fromLTRB(8, 16, index == 4 ? 8 : 0, 16),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          showDialog(
+            context: context,
+            builder: (_) {
+              return MostrarImagemNaTela(
+                imagem: criarAnuncioStore.imagens[index],
+                onDelete: () {
+                  //remove a imagem clicada
+                  //o observablelist atualiza sozinho quando executamos os seus metodos específicos
+                  return criarAnuncioStore.imagens.removeAt(index);
+                },
+              );
+            },
+          );
+        },
         onDoubleTap: () {
           print("teste");
         },
@@ -70,12 +81,7 @@ class ImagesField extends StatelessWidget {
 
   Padding imagemNova(BuildContext context, int index, void adicionarImagemNaTela(File imagem)) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(
-        8,
-        16,
-        8, //este aqui sempre estará com 8
-        16,
-      ),
+      padding: EdgeInsets.fromLTRB(8, 16, 8, 16),
       child: GestureDetector(
         onTap: () {
           //a camera abre de duas formas deiferentes em cada dispositivo
