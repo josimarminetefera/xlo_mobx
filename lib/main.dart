@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 import 'package:xlo_mobx/repositorios/catagoria_repositorio.dart';
 import 'package:xlo_mobx/screens/base/base_screen.dart';
+import 'package:xlo_mobx/stores/categoria_store.dart';
 import 'package:xlo_mobx/stores/pagina_store.dart';
 import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
 
@@ -25,18 +26,20 @@ Future<void> iniciarParse() async {
     debug: true, // para mostrar no terminal tudo que está acontecendo no parse.
   );
 
-  //verificar se as categorias estão ok
-  final categorias = await CategoriaRepositorio().buscarListaCategorias();
-  print("main ....................... ");
-  print(categorias);
+
+  //somente para teste
+  //final categorias = await CategoriaRepositorio().buscarListaCategorias();
+  //print("main ....................... ");
+  //print(categorias);
 }
 
-//Com isso aqui eu posso acessar a intancia de PageStore de qualquer local do app.
+//Com isso aqui eu posso acessar a instancia de PageStore de qualquer local do app.
 void setupLocators() {
   print("main setupLocators()");
   //Singleton tem um valor só no app inteiro acessivel de qualquer parte do app
   GetIt.I.registerSingleton(PaginaStore());
   GetIt.I.registerSingleton(UsuarioGerenciadorStore());
+  GetIt.I.registerSingleton(CategoriaStore());
 }
 
 class MyApp extends StatelessWidget {
