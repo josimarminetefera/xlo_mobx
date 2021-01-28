@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:parse_server_sdk_flutter/parse_server_sdk.dart';
 import 'package:xlo_mobx/repositorios/catagoria_repositorio.dart';
 import 'package:xlo_mobx/screens/base/base_screen.dart';
+import 'package:xlo_mobx/screens/categoria/categoria_screen.dart';
 import 'package:xlo_mobx/stores/categoria_store.dart';
 import 'package:xlo_mobx/stores/pagina_store.dart';
 import 'package:xlo_mobx/stores/usuario_gerenciador_store.dart';
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
         ),
         cursorColor: Colors.orange,
       ),
-      home: BaseScreen(),
+      home: CategoriaScreen(),
     );
   }
 }
