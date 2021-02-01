@@ -58,12 +58,22 @@ class CategoriaScreen extends StatelessWidget {
                   final categoria = categorias[index];
                   //InkWell serve para tocar em algo
                   return InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).pop(categoria);
+                    },
                     child: Container(
+                      alignment: Alignment.center,
                       height: 50,
                       //pinta de rocho caso seja selecionado
-                      color: categoria.id == categoria_selecionada?.id ? Colors.purple.withAlpha(50) : null,
-                      child: Text(categoria.descricao),
+                      color: (categoria.id == categoria_selecionada?.id) ? Colors.purple.withAlpha(50) : null,
+                      child: Text(
+                        categoria.descricao,
+                        style: TextStyle(
+                          color: Colors.grey[700],
+                          //coloca em negrito caso esteja selecionado
+                          fontWeight: (categoria.id == categoria_selecionada?.id) ? FontWeight.bold : null,
+                        ),
+                      ),
                     ),
                   );
                 },
