@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:get_it/get_it.dart';
+import 'package:xlo_mobx/components/erro_box.dart';
 import 'package:xlo_mobx/models/categoria.dart';
 import 'package:xlo_mobx/stores/categoria_store.dart';
 
@@ -12,7 +14,8 @@ class CategoriaScreen extends StatelessWidget {
   final Categoria categoria_selecionada;
   final bool mostrar_todas_categorias;
 
-  final CategoriaStore categoriaStore =  
+  //consigo acessar ainstanccia que está la no main
+  final CategoriaStore categoriaStore = GetIt.I<CategoriaStore>();
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +31,44 @@ class CategoriaScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
           ),
           child: Observer(builder: (_) {
-
+            //3 possibilidades ou erro ou carregando ou os dados
+            //aquitem que ter acesso a categoriaStore
+            if (categoriaStore.erro != null) {
+              return ErroBox(
+                mensagem: categoriaStore.erro,
+              );
+            } else if (categoriaStore.listaCategorias.isEmpty) {
+              //ainda não troxe a lista de categorias
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              //já está com todos dados
+              final categorias = mostrar_todas_categorias ? categoriaStore.listaCategoriasCompleta : categoriaStore.listaCategorias;
+              //separated é para criar uma lista separada
+              return ListView.separated(
+                itemCount: categorias.length,
+                separatorBuilder: (_, __) {
+                  return Divider(
+                    height: 0.1,
+                    color: Colors.grey,
+                  );
+                },
+                itemBuilder: (_, index) {
+                  final categoria = categorias[index];
+                  //InkWell serve para tocar em algo
+                  return InkWell(
+                    onTap: () {},
+                    child: Container(
+                      height: 50,
+                      //pinta de rocho caso seja selecionado
+                      color: categoria.id == categoria_selecionada?.id ? Colors.purple.withAlpha(50) : null,
+                      child: Text(categoria.descricao),
+                    ),
+                  );
+                },
+              );
+            }
           }),
         ),
       ),

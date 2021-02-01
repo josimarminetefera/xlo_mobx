@@ -16,6 +16,10 @@ abstract class _CategoriaStore with Store {
 
   ObservableList<Categoria> listaCategorias = ObservableList<Categoria>();
 
+  @computed
+  //trazer a lista de categorias mais uma extra de todas
+  List<Categoria> get listaCategoriasCompleta => List.from(listaCategorias)..insert(0, Categoria(id: "*", descricao: "Todas"));
+
   Future<void> _carregarCategorias() async {
     try {
       //lista de categorias
