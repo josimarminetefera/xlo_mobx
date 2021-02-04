@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
         ),
         cursorColor: Colors.orange,
       ),
-      home: CategoriaScreen(),
+      home: BaseScreen(),
     );
   }
 }

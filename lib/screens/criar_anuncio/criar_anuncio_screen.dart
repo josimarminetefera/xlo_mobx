@@ -2,6 +2,7 @@ import 'package:brasil_fields/brasil_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:xlo_mobx/components/custom_drawer/custom_drawer.dart';
+import 'package:xlo_mobx/screens/criar_anuncio/widget/categoria_field.dart';
 import 'package:xlo_mobx/screens/criar_anuncio/widget/images_field.dart';
 import 'package:xlo_mobx/stores/criar_anuncio_store.dart';
 
@@ -50,6 +51,7 @@ class CriarAnuncioScreen extends StatelessWidget {
               ),
               maxLines: null,
             ),
+            CategoriaField(criarAnuncioStore),
             TextFormField(
               decoration: InputDecoration(
                 labelText: 'Preço *',
