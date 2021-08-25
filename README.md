@@ -1,4 +1,4 @@
-# xlo_mobx
+# Projeto clone da OLX feito com mobX no Flutter.
 
 Projeto para aplicar mobx
 
